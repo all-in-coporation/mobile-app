@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" float-left>
+      <ion-back-button icon="none">
+        <img src="assets/img/back.png" />
+      </ion-back-button>
+    </ion-buttons>
+    <ion-buttons class="menu-container" slot="end" float-right>
+      <ion-button>
+        <ion-icon size="small" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding fullscreen>
+  <ion-list>
+    <ion-list-header text-center (click)="goToProfile()">
+      <ion-avatar>
+        <img [src]="user?.profilePic" />
+      </ion-avatar>
+    </ion-list-header>
+    <ion-item class="short" no-lines>
+      <ion-label text-center>
+        <span class="uppercase">{{ user.name }} </span>
+        <span class="uppercase">{{ user?.middleName }}</span>
+        <span class="uppercase">{{ user.surname }}</span>
+      </ion-label>
+    </ion-item>
+    <ion-item class="short" no-lines>
+      <ion-label text-center>
+        <span class="italic">{{ user.job }}</span>
+      </ion-label>
+    </ion-item>
+    <ion-item class="short" no-lines>
+      <ion-label text-center class="nationality-container">
+        <div>
+          <span>{{ user.yearsOld }} {{ "generic.years"|translate }} </span> <img class="small-flag"
+            [src]="'assets/img/' + user.nationality + '.jpg'" />
+        </div>
+      </ion-label>
+    </ion-item>
+    <ion-item class="short flags-container" no-lines>
+      <ion-label text-center>
+        <img class="small-flag rounded" *ngFor="let flag Of user?.speakLenguages"
+          [src]="'assets/img/' + flag + '.jpg'" />
+      </ion-label>
+    </ion-item>
+    <ion-item class="counter-container" no-lines>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="strong small-text">5</ion-col>
+          <ion-col class="border-right small-text">Eventos</ion-col>
+          <ion-col class="strong small-text">1668</ion-col>
+          <ion-col class="border-right small-text">Seguidores</ion-col>
+          <ion-col class="strong small-text">2018</ion-col>
+          <ion-col class="small-text">Seguidos</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item class="text-center add-friend" no-lines>
+      <ion-button class="mx-auto" size="small" fill="outline"><img src="assets/img/add-friend.png"> Enviar solicitud
+      </ion-button>
+    </ion-item>
+    <ion-item class="social-media" no-lines>
+      <div class="mx-auto">
+        <a>
+          <img src="assets/img/facebook.png" />
+        </a>
+        <a>
+          <img src="assets/img/instagram.png" />
+        </a>
+        <a>
+          <img src="assets/img/twitter.png" />
+        </a>
+      </div>
+    </ion-item>
+    <ion-item class="contact-container" no-lines>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="border-right">
+            <a href="{{ user.email[0] }}">
+              <img class="mail" src="assets/img/email.png" />
+            </a>
+          </ion-col>
+          <ion-col>
+            <a
+              href="+{{ user.phone[0].countryCode }}{{ user.phone[0].areaCode }}{{ user.phone[0].prefix }}{{ user.phone[0].lineNumber }}">
+              <img class="phone" src="assets/img/phone.png" />
+            </a>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item no-lines class="tags-container">
+      <ion-grid>
+        <ion-row align-items-start>
+          <ion-col *ngFor="let kind of user?.musicKind">
+            <span class="tags uppercase">
+              {{ kind }}
+            </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <!-- <ion-card>
+          <ion-img src="/assets/imgen.png"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+            <ion-card-title>Card Title</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Keep close to Nature's heart... and break clear away, once in awhile,
+            and climb a mountain or spend a week in the woods. Wash your spirit clean.
+          </ion-card-content>
+        </ion-card> -->
+  </ion-list>
+</ion-content>

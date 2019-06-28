@@ -1,0 +1,75 @@
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    ion-button {
+        --background: transparent;
+        --ion-color-base: transparent !important;
+        color: #FF47D6;
+        padding: 0;
+        .icon {
+            width: 1.5rem;
+        }
+    }
+
+    .moon-container {
+        position: absolute;
+        right: 0;
+        top: 1rem;
+    }
+
+}
+
+.icon.large {   
+    width: 2rem;
+}
+
+ion-content {
+    --background: #3c0066;
+    --background: -moz-radial-gradient(center, ellipse cover, #7525b9 0%, #3c0066 100%);
+    --background: -webkit-radial-gradient(center, ellipse cover, #7525b9 0%,#3c0066 100%);
+    --background: radial-gradient(ellipse at center, #7525b9 0%,#3c0066 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7525b9', endColorstr='#3c0066', GradientType=1);
+    position: relative;
+    ion-searchbar {
+        --background: transparent;
+        --color: white;
+        --placeholder-color: white;
+        --icon-color: white;
+        box-shadow: none!important;
+        border: #FF47D6 solid 1.3px;
+        padding: 0;
+        border-radius: 0.3rem;
+    }
+    ion-card {
+        padding: 0;
+        border: #FF47D6 solid 1.3px;
+        margin: 0.5rem 0 0 0;
+        border-radius: 0.3rem;
+        ion-card-content {
+            padding: 0;
+            .img {
+                width: 100%;
+            }
+            .footer {
+                position: absolute;
+                bottom: 0;
+                color: white;
+                background-color: rgba(60, 0, 102, 0.5);
+                width: 100%;
+                [name=btn-detail] {
+                    --border-color: #FF47D6;
+                    --color: white;
+                }
+            }
+        }
+    }
+}
+
+.header:after
+{
+    background: none;
+    all: initial;
+    * {
+      all: unset;
+    }
+}

@@ -1,0 +1,35 @@
+<ion-content padding>
+  <ion-toolbar>
+    <ion-back-button slot="start">
+      <img class="img-icon" src="assets/img/back.png">
+    </ion-back-button>
+    <ion-buttons slot="end">
+      <ion-button>
+        <img class="icon" src="assets/img/filter.png">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-searchbar animated></ion-searchbar>
+  <ion-card *ngFor="let activity of activities">
+    <ion-card-content>
+      <img class="img" src="{{ activity.profile_pic }}"/>
+      <div class="footer">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <strong>{{ activity.name }} - </strong><span>{{ activity.branch_office[0].address }}</span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>{{ activity.time }}</ion-col>
+            <ion-col>
+              <ion-button name="btn-detail" fill="outline">
+                Ver boliche
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-card-content>
+  </ion-card>  
+</ion-content>

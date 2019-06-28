@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-toolbar class="{{ showMenu ? 'top-bar' : '' }}">
+    <ion-buttons slot="start" float-left>
+      <ion-button class="{{ showMenu ? 'd-none' : '' }}" (click)="showMenu = !showMenu">
+        <ion-icon name="more"></ion-icon>
+      </ion-button>
+      <div class="dropdown-menu-container">
+        <ul lines="none" class="dropdown-menu" style="display: none">
+          <li>
+            <ion-button [routerLink]="['/members', 'profile']">
+              <div class="profile-outer-circle">
+                <div class="profile-inner-circle">
+                  <img class="icon large profile-pic" [src]="user.profilePic" />
+                </div>
+              </div>
+            </ion-button>
+          </li>
+          <li>
+            <ion-button>
+              <img class="icon" src="assets/img/search-people.png" />
+            </ion-button>
+          </li>
+          <li>
+            <ion-button>
+              <img class="icon" src="assets/img/menu-business-profile.png" />
+            </ion-button>
+          </li>
+          <li>
+            <ion-button>
+              <img class="icon" src="assets/img/lenguaje.png" />
+            </ion-button>
+          </li>
+          <li>
+            <ion-button>
+              <img class="icon" src="assets/img/card.png" />
+            </ion-button>
+          </li>
+          <li>
+            <ion-button>
+              <img class="icon" src="assets/img/settings.png" />
+            </ion-button>
+          </li>
+          <li>
+            <ion-button (click)="logout()">
+              <img class="icon" src="assets/img/logout.png" />
+            </ion-button>
+          </li>
+        </ul>
+      </div>
+    </ion-buttons>
+    <ion-buttons class="moon-container {{ showMenu ? 'd-none' : '' }}" slot="end" float-right>
+      <ion-button>
+        <img class="icon" [src]="moonIcon" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen padding>
+  <div class="middle">
+    <div class="round-outer-container">
+      <div class="dotted-container">
+        <div class="round-container">
+          <div class="small-circle"></div>
+          <div class="cross">
+            <div class="vr"></div>
+            <hr class="line-40" />
+            <hr class="line-80" />
+          </div>
+          <img src="assets/icon/AllInNight.png" />
+          <a [routerLink]="['/members', 'categories']" class="discover-icon corner-segment-1"><img
+              src="assets/img/discover-motel.png" /></a>
+          <a class="discover-icon corner-segment-2"><img src="assets/img/discover-others.png" /></a>
+          <a class="discover-icon corner-segment-3"><img src="assets/img/discover-bar.png" /></a>
+          <a class="discover-icon corner-segment-4"><img src="assets/img/discover-events.png" /></a>
+          <a class="discover-icon corner-segment-5"><img src="assets/img/discover-disco.png" /></a>
+          <a class="discover-icon corner-segment-6"><img src="assets/img/discover-sun.png" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row text-center>
+        <ion-col>
+          <ion-button class="footer-button" fill="clear">
+            <img class="icon large" src="assets/img/rocket.png" />
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="footer-button" fill="clear">
+            <img class="icon large" src="assets/img/home.png" />
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="footer-button" fill="clear">
+            <img class="icon large" src="assets/img/chat.png" />
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

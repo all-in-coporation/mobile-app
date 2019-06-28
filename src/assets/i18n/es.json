@@ -1,0 +1,33 @@
+{
+    "generic": {
+        "years": "años"
+    },
+    "person": {
+        "name": "Nombre",
+        "middle_name": "Segundo nombre",
+        "surname": "Apellido",
+        "identifier": "D.N.I",
+        "tax_id": "C.U.I.T",
+        "birth_date": "Fecha de nacimiento",
+        "gender": "Genero",
+        "nationality": "Nacionalidad",
+        "years_old": "Años de edad"
+    },
+    "contact": {
+        "phone": {
+            "descriptor": "Teléfono",
+            "area_code": "Código de área",
+            "line_number": "Número de linea",
+            "country_code": "Código de país",
+            "prefix": "Prefijo",
+            "intern_number": "Número de interno"
+        },
+        "email": "Email",
+        "address": {
+            "descriptor": "Dirección",
+            "street": "Calle",
+            "floor": "Piso",
+            "Office": "Oficina"
+        }
+    }
+}

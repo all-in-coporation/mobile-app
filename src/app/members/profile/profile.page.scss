@@ -1,0 +1,184 @@
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    .menu-container {
+        ion-button {
+            color: #FF47D6;
+        }
+    }
+    ion-back-button {
+        position: relative;
+        img {
+            width: 1rem;
+            height: 1rem;
+            position: absolute;
+            bottom: 25%;
+        }
+    }
+}
+
+ion-content {
+    position: absolute;
+    top: 1rem;
+    --background: #3c0066;
+    --background: -moz-radial-gradient(center, ellipse cover, #7525b9 0%, #3c0066 100%);
+    --background: -webkit-radial-gradient(center, ellipse cover, #7525b9 0%,#3c0066 100%);
+    --background: radial-gradient(ellipse at center, #7525b9 0%,#3c0066 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7525b9', endColorstr='#3c0066', GradientType=1);
+    .counter-container {
+        .border-right {
+            border-right: 1px solid #7F00D4;
+        }
+        ion-grid {
+            border-top: 1px solid #7F00D4;
+            ion-col {
+                font-size: 0.7rem;
+                &.strong {
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+    span {
+        &:not(.uppercase) {
+            font-size: 14px;
+        }
+    }
+    ion-avatar {
+        border: solid 8px #7F00D4;
+        margin: auto;
+        width: 7rem;
+        height: 7rem;
+        margin-bottom: 16px; 
+    }
+    ion-list {
+        .tags-container {
+            height: auto;
+            .tags {
+                background-color: #8039b9;
+                padding: 0.5rem;
+                border-radius: 12px;
+                padding: 0.4rem;
+                font-size: 12px;
+            }
+        }
+        ion-list-header {
+            margin: 0;
+            height: 7rem;
+            padding: 0;
+        }
+        background: var(--ion-item-background,var(--ion-background-color,transparent));
+        ion-item {
+            --border-style: none;
+            --background: var(--ion-item-background,var(--ion-background-color,transparent));
+            &.short {
+                height: 25px;
+            }
+            &.flags-container {
+                height: auto;
+                margin-top: 0.3rem;
+                ion-label {
+                    margin: 0
+                }
+            }
+            .nationality-container {
+                margin-right: 0;
+                div {
+                    position: relative;
+                    width: 85px;
+                    margin: auto;
+                    height: 3rem;
+                    span {
+                        position: absolute;
+                        left: 0;
+                        top: 1%;
+                    }
+                    img {
+                        position: absolute;
+                        right: 0;
+                        margin: 0;
+                    }
+                }
+            }
+            ion-button {
+                --border-color: #FF47D6;
+                --color: white;
+                background: #FF47D6;
+                margin: auto;
+                border-radius: 10%;
+            }
+            &.contact-container {
+                position: relative;
+                height: 2.8em;
+                border-top: 1px solid #7F00D4;
+                border-bottom: 1px solid #7F00D4;
+                .border-right {
+                    margin-top: 2px;
+                    border-right: 1px solid #7F00D4;
+                }
+                ion-grid {
+                    margin: 0;
+                    width: 100%;
+                    ion-row {
+                        margin: -1rem;
+                        text-align: center;
+                        a {
+                            width: 3rem;
+                            height: 3rem;
+                            color: #7F00D4;
+                            img {
+                                width: 2rem;
+                                height: 2rem;
+                                margin: 0 2rem;
+                                &.phone {
+                                    margin-top: 0.1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            ion-label {
+                border: none;
+                border-color: transparent;
+            }
+        }
+        .small-flag {
+            width: 1.3rem;
+            margin: auto;
+            margin: 0.5rem;
+        }
+        .rounded {
+            border-radius: 50%;
+            height: 1.4rem;
+        }
+        .add-friend {
+            img {
+                width: 1rem;
+                margin-right: 0.5rem;
+            }
+        }
+        .social-media {
+            text-align: center;
+            margin: auto;
+            margin: 0 0.5rem;
+            .mx-auto {
+                margin: auto;
+            }
+            img {
+                width: 1.6rem;
+                margin: 0 1rem;
+            }
+        }
+    }
+}
+
+.header:after
+{
+    // background: none;
+    all: initial;
+    * {
+      all: unset;
+    }
+}

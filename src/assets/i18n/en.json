@@ -1,0 +1,33 @@
+{
+    "generic": {
+        "years": "years"
+    },
+    "person": {
+        "name": "name",
+        "middle_name": "Middle name",
+        "surname": "Last name",
+        "identifier": "Personal identification number",
+        "tax_id": "Tax identifier",
+        "birth_date": "Birth date",
+        "gender": "Gender",
+        "nationality": "Nationality",
+        "years_old": "Years old"
+    },
+    "contact": {
+        "phone": {
+            "descriptor": "Phone",
+            "area_code": "Area code",
+            "line_number": "Line number",
+            "country_code": "Country code",
+            "prefix": "Prefix",
+            "intern_number": "Intern number"
+        },
+        "email": "Email",
+        "address": {
+            "descriptor": "Address",
+            "street": "Street",
+            "floor": "Floor",
+            "Office": "Office"
+        }
+    }
+}

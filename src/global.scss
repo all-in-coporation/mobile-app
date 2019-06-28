@@ -1,0 +1,75 @@
+// http://ionicframework.com/docs/theming/
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.ion-color-all-in-night {
+  --ion-color-base: #3c0066;
+  --ion-color-base-rgb: 60, 0, 102;
+  --ion-color-contrast: #7525b9;
+  --ion-color-contrast-rgb: 117, 37, 185;
+  --ion-color-shade: #3c0066; // We do not have a shade or tint color;
+  --ion-color-tint: #7525b9;
+}
+
+:root {
+  --ion-color-all-in-night-base: #3c0066;
+  --ion-color-all-in-night-base-rgb: 60, 0, 102;
+  --ion-color-all-in-night-contrast: #7525b9;
+  --ion-color-all-in-night-contrast-rgb: 117, 37, 185;
+  --ion-color-all-in-night-shade: #ff47d3; // We do not have a shade or tint color;
+  --ion-color-all-in-night-tint: #7525b1;
+}
+
+%gradient-background-lighter {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7525b9+0,3c0066+100 */
+  background: var(--ion-color-all-in-night-base); /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, var(--ion-color-all-in-night-shade) 0%, var(--ion-color-all-in-night-tint) 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, var(--ion-color-all-in-night-shade) 0%,var(--ion-color-all-in-night-tint) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, var(--ion-color-all-in-night-shade) 0%,var(--ion-color-all-in-night-tint) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--ion-color-all-in-night-shade)', endColorstr='var(--ion-color-all-in-night-tint)',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+%gradient-background {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7525b9+0,3c0066+100 */
+  background: var(--ion-color-all-in-night-base); /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, var(--ion-color-all-in-night-contrast) 0%, var(--ion-color-all-in-night-base) 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, var(--ion-color-all-in-night-contrast) 0%,var(--ion-color-all-in-night-base) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, var(--ion-color-all-in-night-contrast) 0%,var(--ion-color-all-in-night-base) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--ion-color-all-in-night-contrast)', endColorstr='var(--ion-color-all-in-night-base)',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic{
+  font-style: oblique;
+}
+
+.searchbar-input.sc-ion-searchbar-md {
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+}
+
+.profile-outer-circle {
+  @extend %gradient-background-lighter  ;
+  border-radius: 100%;
+  padding: 0.1rem;
+  .profile-inner-circle {
+    border: var(--ion-color-all-in-night-shade) 0.05rem solid;
+    background-color: var(--ion-color-all-in-night-contrast);
+    border-radius: 100%;
+    padding: 0.2rem;
+  }
+}
+
