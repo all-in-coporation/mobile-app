@@ -31,7 +31,7 @@
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
     "animate-scss": "^3.2.1",
-    "auth0-js": "^9.8.2",
+    "auth0-js": "^9.13.2",
     "cordova-android": "^8.0.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.1.3",
